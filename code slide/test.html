@@ -1,0 +1,48 @@
+  <link rel="stylesheet" href="stylewebagency.css">       
+
+	   <div id="logo">
+          <a href="#"><img src="images/logo.png" alt="Logo WebAgency"/></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projets">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--SECTION SLIDER-->
+      <section class="slider_container">
+        <div id="text_slide">
+          <h1>
+            <span id="titre_slide">WEBAGENCY
+            </span> : L'AGENCE DE TOUS VOS PROJETS !
+          </h1>
+          <p id="small_text_slide">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+          <p>
+            <a href="#services">Plus d'infos</a></p>
+        </div>
+        <!-- Conteneur -->
+        <div class="slider">
+          <!-- Contrôleurs -->
+          <input class="slider__controller" type="radio" name="slider-controller" id="slide-1" checked />
+          <input class="slider__controller" type="radio" name="slider-controller" id="slide-2" />
+          <!-- Conteneur intérieur -->
+          <div class="slider__inner">
+            <!-- Image 1 -->
+            <figure class="slide">
+              <img class="slide__image slide__image--1" src="bg1.jpg" alt="fille peinture">
+            </figure>
+            <!-- Image 2 -->
+            <figure class="slide">
+              <img class="slide__image slide__image--2" src="bg2.jpg" alt="garçon mégaphone">
+            </figure>
+          </div>
+          <!-- Interface -->
+          <div class="slider__nav"> 
+            <label class="slider__nav__chevron" for="slide-1"></label>
+            <label class="slider__nav__chevron" for="slide-2"></label> 
+          </div>
+        </div>
+      </section>
