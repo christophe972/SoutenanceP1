@@ -1,7 +1,7 @@
 @font-face
 {
 	font-family: 'Roboto-Bold';
-	src: url('Roboto-Bold.tff');
+	src: url('Font/Roboto-Bold.tff');
 }
 
 body
@@ -535,10 +535,11 @@ textarea
 }
 
 /*------------------------------------RESPONSIVE-----------------------------------*/
-@media only screen and (max-width: 900px)
+@media all and (max-width: 900px) /*portable*/
 { 	
 	#slider_container 
 	{  display: none; }
+	.slider { display: none; }
 	#nos_services 
 	{ padding-top: 150px; }
 	#container_services img 
