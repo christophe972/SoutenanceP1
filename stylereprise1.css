@@ -6,8 +6,9 @@
 
 body
 {
-	margin: 0;
-	width: 100%;	
+	padding: 0;
+    margin: 0;
+    font-size: 1em;
 	background-color: rgb(255,255,255);
 	font-family: 'roboto', sans-serif;
 
@@ -262,7 +263,7 @@ header::after
 /*--------------------------SERVICE---------------------*/
 .nos_services
 {
-	margin-top: 100px;
+	margin-top: 150px;
 }
 
 .nos_services i
@@ -273,7 +274,7 @@ header::after
  .img_pc
  {
  	float: left;
- 	margin-left: 25%;
+ 	margin-left: 10%;
  }
 
  #nos_services 
@@ -290,13 +291,15 @@ header::after
 
 #container_services
 {
-	top:1000px;
+	margin-top: 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
 }
+
+
 .services_description{
 	display: flex;
 	flex-direction: column;
@@ -321,28 +324,28 @@ header::after
 	border: 1px solid rgb(200,200,200);
 	padding: 4%;
 	margin-right: 2.5%;
+
 }
 
-
-.fa-chart-line::after, .fa-cubes::after, .fa-chart-pie::after{
+.fa-chart-line::after, .fa-cubes::after, .fa-chart-pie::after
+{
 	position: absolute;
 	content: "\f111";
 	border-radius: 80px;
-	margin-left: 1%;
-	
-	justify-content: center;
-
+	margin-left: 1%;	
 }
 
-
 /*------------------------------------PROJET------------------------------*/
+
+#container_projets
+{
+	margin-top: 150px;  
+}
 
 #nos_projets
 {
 	text-align: center;
 }
-
-
 
 .points i
 {
@@ -365,6 +368,7 @@ header::after
 
 .nav_bar_projets 
 {		
+	margin-top: 50px;
     overflow: hidden;   
     position: relative;     
     width: 100%; 
@@ -535,15 +539,16 @@ textarea
 }
 
 /*------------------------------------RESPONSIVE-----------------------------------*/
-@media all and (max-width: 900px) /*portable*/
+@media all and (max-width: 900px) 
 { 	
 	#slider_container 
 	{  display: none; }
 	.slider { display: none; }
+	#container_services 
+	{ flex-direction: column; }
 	#nos_services 
 	{ padding-top: 150px; }
-	#container_services img 
-	{  display: none }
+	
 	#container_services i 
 	{ display: none;	}
 	.t1 
