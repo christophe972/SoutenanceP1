@@ -327,23 +327,25 @@ header::after
 
 }
 
-.fa-chart-line::after, .fa-cubes::after, .fa-chart-pie::after
-{
-	position: absolute;
-	content: "\f111";
-	border-radius: 80px;
-	margin-left: 1%;	
-}
+
+ .services_description .fa-circle
+ {
+ 	color: #3491b2;
+ 	position: absolute;
+ 	margin-left: 4%
+ }
 
 /*------------------------------------PROJET------------------------------*/
 
 #container_projets
 {
-	margin-top: 150px;  
+	margin-top: 150px; 
+	background-color: #F5F5F5; 
 }
 
 #nos_projets
 {
+	padding-top: 50px;
 	text-align: center;
 }
 
