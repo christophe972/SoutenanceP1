@@ -604,17 +604,27 @@ figure:hover .mask_text
     position: relative;
     margin-top: 150px;
 }
-
-#google_maps, #conteneur_contact 
+#google_maps
+{
+    z-index: 1
+}
+#google_maps, #conteneur_contact, #blue
 {
     width: 100%;
     position: absolute;
     height: 600px;
 }
-
-#conteneur_contact 
+#blue
 {
     background-color: rgba(92,173,211, .4);
+    position: absolute;
+    z-index: 2
+    
+
+}
+#conteneur_contact 
+{
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -665,7 +675,13 @@ textarea
 }
 
 /*------------------------------------RESPONSIVE-----------------------------------*/
+@media all and (max-width: px) 
+
+{ 
+
+}
 @media all and (max-width: 900px) 
+
 { 	
 	#slider_container 
 	{  display: none; }
@@ -679,8 +695,7 @@ textarea
     {margin-top: 15%;}	
 	.fa-eye
     {	visibility: hidden;	}
-    .slider__nav
-    {top:50%}
+   
 }
 
 
@@ -712,11 +727,8 @@ textarea
 
     #google_maps, #conteneur_contact 
     {  position: relative;}
-
-    #conteneur_contact 
- { background-color: inherit; }    
-    #google_maps
-    { background-color: rgba(92,173,211, .4); }
+  
+    
 }
 
 
