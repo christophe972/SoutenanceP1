@@ -94,10 +94,10 @@ a:hover /*couleur au survol*/
     width: 100%;
     max-width: 100%;
     top: 0px;
-    padding: 5px;
     z-index: 10;
     background-color: white;
     box-shadow: 0px 0px 5px 0px #656565;
+   
 }
 
 
@@ -105,6 +105,7 @@ a:hover /*couleur au survol*/
 {
     display: flex;
     list-style-type: none;
+    padding-top: 5px
 
 }
 
@@ -118,6 +119,7 @@ a:hover /*couleur au survol*/
 .a1:hover /*liens menu survol*/
 {
     border-top: 2px #5CADD3 solid;
+
 }
 
 
@@ -140,7 +142,13 @@ a:hover /*couleur au survol*/
 {
 	width: 100%;	
 	overflow: hidden;
+    padding-top: 50px
 	
+}
+
+#slider_container input
+{
+    display: none;
 }
 
 .slider__inner
@@ -149,7 +157,7 @@ a:hover /*couleur au survol*/
 	display: flex;
 	width: 400%;
 	transition: transform 1s;
-	z-index: 2000;
+	z-index: 200;
 	overflow: hidden;
 
 }
@@ -185,12 +193,13 @@ a:hover /*couleur au survol*/
 	width: 3%;
 	height: 50%;
 	background-color: black;
-	opacity: 0.5;
+	opacity: 0.2;
 	cursor: pointer;
 	z-index: 3;
 }
 
 #slide-1:checked ~ .slider__inner {
+    transform: translateX(-0%);
 }
 
 #slide-2:checked ~ .slider__inner {
@@ -199,8 +208,8 @@ a:hover /*couleur au survol*/
 
 
 
-#slide-2:checked ~ .slider__nav > .slider__nav__chevron:nth-child(1), 
-#slide-1:checked ~ .slider__nav > .slider__nav__chevron:nth-child(1){
+.slider__nav__chevron:nth-child(1), 
+.slider__nav__chevron:nth-child(1){
 	display: block;
 	float: left;
 	border-top-right-radius: 100px;
@@ -211,8 +220,8 @@ a:hover /*couleur au survol*/
 	background-size: 125%,125%;
 	  }
 
-#slide-1:checked ~ .slider__nav > .slider__nav__chevron:nth-child(2),
-#slide-2:checked ~ .slider__nav > .slider__nav__chevron:nth-child(2) {
+.slider__nav__chevron:nth-child(2),
+.slider__nav__chevron:nth-child(2) {
 	display: block;
 	float: right;
 	border-top-left-radius: 100px;
@@ -229,8 +238,7 @@ a:hover /*couleur au survol*/
 {
 	position: absolute;
 	z-index: 1;
-	top: 15%;
-	
+	top: 15%;	
 	height: 20%;
 	color: #FFFFFF;
 }
@@ -247,7 +255,7 @@ a:hover /*couleur au survol*/
 
 #text_slide
 {
-	
+	color: #FFFFFF;
 	position: absolute;
 	z-index:10;
 	padding-top: 10%;
@@ -261,10 +269,6 @@ a:hover /*couleur au survol*/
 	color: #3491b2;
 }
 
-#text_slide 
-{
-	color: #FFFFFF;
-}
 
 #small_text_slide
 {
@@ -285,12 +289,14 @@ a:hover /*couleur au survol*/
 	padding: 2.5% 5% 2.5% 5%; 
 }
 
+
+
 /*--------------------------SERVICE---------------------*/
 
 #services/*section services*/
 {
     padding-top: 100px;
-    padding-bottom: 190px;
+    padding-bottom: 100px;
 }
 
 #ti_services/*titre et sous titre*/
@@ -395,7 +401,7 @@ a:hover /*couleur au survol*/
     max-width: 450px;
 }
 
-/*------------------------------------PROJET------------------------------*/
+/*------------------------------------SECTION   PROJET------------------------------*/
 
 #container_projets
 {
@@ -420,7 +426,6 @@ a:hover /*couleur au survol*/
  /*----------menu nos Projets-------*/
 
 
-
 #tabs /*on commence ici les tab */
 {
     position: relative;
@@ -441,15 +446,12 @@ a:hover /*couleur au survol*/
     position: absolute;
     top:0;
     width: 80px;
-    padding: 10px;
-    overflow: visible;
+    padding: 10px;    
     z-index: 3;
     text-align: center;
     background: #E5E5E5;
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    transition: all 0.3s;
+ 
 }
 
 .tab label:hover /*tab*/
@@ -460,10 +462,6 @@ a:hover /*couleur au survol*/
     cursor: pointer;
 }
 
-.tab label:active /*tab*/
-{
-    background: #4494BB;
-}
 
 .tab label[for=tab-1] /*tab*/
 {
@@ -492,34 +490,37 @@ a:hover /*couleur au survol*/
     margin-right: auto;
     left: 0;
     right: 0;
-    bottom: -16px;
+    bottom: -13px;
     color: #468CAD;
-    font-size: 1em;
+    
 }
 
-#tabs div:first-child label /*tab*/
+#tabs div:first-child label /*tab */
 {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+
+#tabs div:last-child label /*tab*/
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 .tab input[type=radio] /*tab*/
 {
     display: none;
 }
 
-.tab .content /*tab*/
-{
-    width: 100%;
-    background-color: #F5F5F5;
-}
+
 
 input[type=radio]:checked ~ label /*tab bouton*/
 {
     background-color: #5CADD3;
     color: white;
-    z-index: 2;
-    border-top: none;
+    z-index: 2;   
     border-bottom: solid 3px #468CAD;
 }
 
@@ -532,18 +533,6 @@ input[type=radio]:not(:checked) ~ label i /*tab bouton*/
 {
     display: none;
 }
-
-input[type=radio]:checked ~ label ~ .content /*tab bouton*/
-{
-    z-index: 1;
-}
-
-input[type=radio]:not(:checked) ~ label ~ .content /*tab bouton*/
-{
-    display: none;
-}
-
-
 
 
 
@@ -607,7 +596,7 @@ figure:hover .mask_text
 	margin-top: -5%;
 	opacity: 1;
 }
-/*------------------CONTACT------------------------*/
+/*------------------ SECTION CONTACT------------------------*/
 
 
 #contact 
@@ -616,7 +605,7 @@ figure:hover .mask_text
     margin-top: 150px;
 }
 
-.google_maps, #conteneur_contact 
+#google_maps, #conteneur_contact 
 {
     width: 100%;
     position: absolute;
@@ -680,39 +669,61 @@ textarea
 { 	
 	#slider_container 
 	{  display: none; }
-	.slider { display: none; }
+	.slider 
+    { display: none; }
 	#container_services 
-	{ flex-direction: column; }
-	#nos_services 
-	{ padding-top: 150px; }
-	
+	{ flex-direction: column; }	
 	#container_services i 
-	{ display: none;	}
-	.t1 
-	{  text-align: justify; }
-	.logo 
-	{    display:  none; }
-	.mask{
-		margin-top: 15%;
-	}
-	figure:hover .mask{
-    transform: translateY(-90px);
-	}
+	{ display: none;	}	
+	.mask
+    {margin-top: 15%;}	
 	.fa-eye
-	{
-	visibility: hidden;
-	}	
+    {	visibility: hidden;	}
+    .slider__nav
+    {top:50%}
 }
 
-@media only screen and (max-width: 1200px)
+
+
+@media all and (max-width: 600px)
 {
+    #logo 
+    { display: none;   }
+    #container_contact 
+    { display: inline-flex;  }
+    .section_title_underline span
+    { display: none; }
+    #tabs
+    {   width: 70%; margin-left: 50px} 
+    #services /*services*/ 
+    {    flex-direction: column;
+            -webkit-flex-direction: column;
+        text-align: center;    }
+         .ti_projets/*projets titre et sous titre*/
+    {       width: 100%;    }
+     #logo_menu1 
+    {
+        flex-direction: column;       
+        justify-content: center;
+        align-items: center;
+        text-align: center;    }
+    section#services, section#portfolio
+    {  padding-top: 200px; }
 
-	.services_description i 
-	{ display: none; }
+    #google_maps, #conteneur_contact 
+    {  position: relative;}
 
-	
-
-
-
+    #conteneur_contact 
+ { background-color: inherit; }    
+    #google_maps
+    { background-color: rgba(92,173,211, .4); }
 }
 
+
+@media all and (max-width: 400px) 
+{
+    #tabs
+    {   display: none} 
+    .mask_text
+    { display: none }
+}
