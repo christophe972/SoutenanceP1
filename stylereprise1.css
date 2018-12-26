@@ -119,6 +119,7 @@ a:hover /*couleur au survol*/
 .a1:hover /*liens menu survol*/
 {
     border-top: 2px #5CADD3 solid;
+    top: 0px;
 
 }
 
@@ -138,7 +139,7 @@ a:hover /*couleur au survol*/
 /*-------------------------SLIDER----------------------------------*/
 
 
-#slider_container
+#slider_container  /*----mise en forme image slide----*/
 {
 	width: 100%;	
 	overflow: hidden;
@@ -146,7 +147,7 @@ a:hover /*couleur au survol*/
 	
 }
 
-#slider_container input
+#slider_container input /*--affichage des boutons---*/
 {
     display: none;
 }
@@ -177,11 +178,12 @@ a:hover /*couleur au survol*/
 	height: auto;
 }
 
-.slider__nav 
-{
+
+.slider__nav /*---------mise en forme chevron-----*/
+{     
 	position: absolute;
 	z-index: 3;
-	top: 45%;
+	top: 60%;
 	width: 100%;
 	height: 20%;
 	transform: translateY(-50%);
@@ -193,51 +195,39 @@ a:hover /*couleur au survol*/
 	width: 3%;
 	height: 50%;
 	background-color: black;
-	opacity: 0.2;
+	opacity: 0.1;
 	cursor: pointer;
 	z-index: 3;
 }
 
-#slide-1:checked ~ .slider__inner {
-    transform: translateX(-0%);
-}
-
-#slide-2:checked ~ .slider__inner {
-	transform: translateX(-25%);
-}
 
 
 
 .slider__nav__chevron:nth-child(1), 
-.slider__nav__chevron:nth-child(1){
+.slider__nav__chevron:nth-child(1)
+{
 	display: block;
 	float: left;
 	border-top-right-radius: 100px;
-	border-bottom-right-radius: 100px;
-	background-image: url();
-	background-repeat: no-repeat;
-	background-position:right;
-	background-size: 125%,125%;
-	  }
+	border-bottom-right-radius: 100px;			
+}
 
 .slider__nav__chevron:nth-child(2),
-.slider__nav__chevron:nth-child(2) {
+.slider__nav__chevron:nth-child(2) 
+{
 	display: block;
 	float: right;
 	border-top-left-radius: 100px;
-	border-bottom-left-radius: 100px;
-	background-image: url();
-	background-repeat: no-repeat;
-	background-position:left;
-	
+	border-bottom-left-radius: 100px;		
+	right: -10px;
 }
 
 
 
-.fleche_slide 
+.fleche_slide /*---------fleche sur chevron-------*/
 {
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
 	top: 15%;	
 	height: 20%;
 	color: #FFFFFF;
@@ -246,14 +236,14 @@ a:hover /*couleur au survol*/
 .fleche_slide2 
 {
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
 	top: 15%;
 	right: 0;
 	color: #FFFFFF;
 
 }
 
-#text_slide
+#text_slide /*--------texte sur slider-----------*/
 {
 	color: #FFFFFF;
 	position: absolute;
@@ -275,7 +265,7 @@ a:hover /*couleur au survol*/
 	color: white;
 }
 
-#bouton1
+#bouton1 /*-------bouton plus d'info----------*/
 {
 	margin-top: 50px;
 }
@@ -290,6 +280,70 @@ a:hover /*couleur au survol*/
 }
 
 
+/*SLIDER ANIMATION*/
+
+
+#slide-1:checked ~ .slider__inner figure.slide /*slider liste annimation*/
+{
+    transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slider__inner figure.slide/*slider liste annimation*/
+{
+    transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+}
+
+.slider__inner figure.slide/*slider liste annimation*/
+{
+    animation: slide 10s infinite;
+        -webkit-animation: slide 10s infinite;
+        -moz-animation: slide 10s infinite;
+    transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+}
+
+@-webkit-keyframes slide 
+{
+    0%, 30% { -webkit-transform: translateX(0%); }
+    50%, 80%    { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes slide 
+{
+    0%, 30% { -moz-transform: translateX(0%); }
+    50%, 80%    { -moz-transform: translateX(-100%); }
+}
+@keyframes slide 
+{
+    0%, 30% { transform: translateX(0%); }
+    50%, 80%    { transform: translateX(-100%); }
+}
+
+
+
+#timeline
+{ 
+    bottom: 10px;
+    position: absolute; 
+    width: 10px;
+    height: 10px; 
+    background: rgb(50, 150, 180); 
+    position: relative; 
+    animation: mymove 5s infinite; 
+}
+
+@keyframes mymove 
+{
+ 0% 
+ { background: rgb(50, 150, 180); width: 0%;} 
+ 100% 
+ {  background: rgb(50, 150, 180); width: 100%;} 
+}
 
 /*--------------------------SERVICE---------------------*/
 
@@ -675,13 +729,38 @@ textarea
 }
 
 /*------------------------------------RESPONSIVE-----------------------------------*/
-@media all and (max-width: px) 
 
+@media all and (max-width: 2800px) 
 { 
+    .slider__nav 
+    { top: 55%; }
 
 }
-@media all and (max-width: 900px) 
 
+
+@media all and (max-width: 2000px) 
+{ 
+    .slider__nav 
+    { top: 45%; }
+
+}
+
+@media all and (max-width: 1500px) 
+{ 
+    .slider__nav 
+    { top: 40%; }
+
+}
+
+
+@media all and (max-width: 1200px) 
+{ 
+    .slider__nav 
+    { top: 30%; }
+
+}
+
+@media all and (max-width: 900px) 
 { 	
 	#slider_container 
 	{  display: none; }
