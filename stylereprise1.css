@@ -386,7 +386,7 @@ a:hover /*couleur au survol*/
 
 .te_services/*sous titre*/
 {
-    width: 28%;
+    width: 90%;
 }
 
 #services ul.services /*images et services*/
@@ -781,8 +781,11 @@ textarea
 
 @media all and (max-width: 600px)
 {
-    #logo 
-    { display: none;   }
+   header 
+   {
+    display: flex;
+    flex-direction: column;
+   }
     #container_contact 
     { display: inline-flex;  }
     .section_title_underline span
@@ -801,9 +804,7 @@ textarea
         justify-content: center;
         align-items: center;
         text-align: center;    }
-    section#services, section#portfolio
-    {  padding-top: 200px; }
-
+    
     #google_maps, #conteneur_contact 
     {  position: relative;}
   
